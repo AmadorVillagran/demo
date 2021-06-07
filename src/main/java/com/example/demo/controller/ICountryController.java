@@ -8,11 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.demo.dto.CountryDTO;
 
 @RequestMapping("/country")
-public interface CountryController {
+public interface ICountryController {
 
 	@GetMapping("/findAllCountries")
 	public List<CountryDTO> findAllCountries();
-
-	@GetMapping("/findAllPaises")
-	public List<CountryDTO> findAllPaises();
 }

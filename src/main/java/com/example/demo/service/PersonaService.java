@@ -22,8 +22,8 @@ public class PersonaService {
 		return IPersonaMapper.INSTANCE.listPersonaToListPersonaDTO(personaRespository.findAll());
 	}
 	
-	public PersonaDTO save(PersonaDTO persona) {
-		Persona per = IPersonaMapper.INSTANCE.personaDTOToPersona(persona);
-		return IPersonaMapper.INSTANCE.personaToPersonaDTO(personaRespository.save(per));
+	public PersonaDTO save(PersonaDTO personaDTO) {
+		Persona persona = IPersonaMapper.INSTANCE.personaDTOToPersona(personaDTO);
+		return IPersonaMapper.INSTANCE.personaToPersonaDTO(personaRespository.save(persona));
 	}
 }

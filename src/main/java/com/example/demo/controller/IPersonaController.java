@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.demo.dto.PersonaDTO;
 
 @RequestMapping(value = "/persona")
-public interface PersonaController {
+public interface IPersonaController {
 	
 	@GetMapping(value = "/findAll")
 	public List<PersonaDTO> findAllPersonas();

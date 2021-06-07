@@ -6,13 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.controller.PersonaController;
+import com.example.demo.controller.IPersonaController;
 import com.example.demo.dto.PersonaDTO;
 import com.example.demo.service.PersonaService;
 
 @CrossOrigin(origins = "*")
 @RestController
-public class PersonaControllerImpl implements PersonaController {
+public class PersonaControllerImpl implements IPersonaController {
 
 	@Autowired
 	private PersonaService personaService;
