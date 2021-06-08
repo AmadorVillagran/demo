@@ -13,7 +13,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -31,16 +30,12 @@ public class Persona {
 
 	@Column(name = "name")
 	private String name;
-	
-	@JoinColumn(name= "persona_details_id")
-	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	private PersonaDetails personaDetails;
 
 	@JoinColumn(name = "persona_id")
-	@OneToMany(fetch = FetchType.LAZY, cascade= CascadeType.ALL)
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<Document> documents;
-	
+
 	@JoinTable(name = "personas_profiles")
-	@ManyToMany(fetch = FetchType.LAZY, cascade= CascadeType.ALL)
+	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<Profile> profiles;
 }
