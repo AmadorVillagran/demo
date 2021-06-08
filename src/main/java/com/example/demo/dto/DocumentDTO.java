@@ -5,12 +5,11 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class CountryDTO {
+public class DocumentDTO {
 
 	private Integer id;
-
-	private String code;
-
-	private String description;
-
+	
+	private String number;
+	
+	private String type;
 }
